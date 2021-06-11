@@ -1,12 +1,11 @@
 
 import React from 'react';
 import { Switch, Route } from 'react-router-dom'
-
 import Header from './components/header/header.component'
 import SingIn_SingUp from './components/SingIn-SingUp/SingIn-SingUp.components'
 import HomePage from './components/homepage/homepage.component';
 import ShopPage from './components/shop/shop.component.jsx'
-import { auth } from './firebase/fireabase.utils'
+import { auth, createUser } from './firebase/fireabase.utils'
 
 import './styles/global/App.css'
 
@@ -24,12 +23,26 @@ class App extends React.Component {
   //life cycle of functions where the user can login and logout, explained
 
   unsubscribeFromAuth = null
-  componentDidMount() {
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
-      this.setState({ currentUser: user });
 
-      console.log(user)
-    })
+  componentDidMount() {
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+      if (userAuth) {
+        const userRef = await createUser(userAuth);
+
+        userRef.onSnapshot(snapShot => {
+          this.setState({
+            currentUser: {
+              id: snapShot.id,
+              ...snapShot.data()
+            }
+          });
+
+          console.log(this.state);
+        });
+      }
+
+      this.setState({ currentUser: userAuth });
+    });
   }
 
   componentWillUnmount() {
