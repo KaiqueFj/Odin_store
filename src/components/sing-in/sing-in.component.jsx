@@ -1,5 +1,7 @@
 import React from "react";
-import FormInput from "../form-input/form.component"
+import FormInput from "../form-input/form.component";
+import CustomButton from "../custom-button/custom.button.component";
+import { signInWithGoogle } from "../../firebase/fireabase.utils";
 
 import "../../styles/components/sing-in/sing-in.styles.scss";
 
@@ -50,7 +52,10 @@ class SingIn extends React.Component {
             required
           />
 
-          <input type="submit" value="Submit Form" />
+          <CustomButton type="submit"> Sing In </CustomButton>
+          <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
+            {""} Sign in with Google {""}
+          </CustomButton>
         </form>
       </div>
     );
