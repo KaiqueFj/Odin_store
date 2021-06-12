@@ -5,6 +5,7 @@ import CustomButton from "../custom-button/custom-button.component";
 
 import { auth, createUser } from "../../firebase/fireabase.utils";
 
+import '../../styles/components/sing-Up/sing-up.styles.scss'
 import "../../styles/components/custom-button/custom-button.styles.scss";
 
 class SingUp extends React.Component {
@@ -36,6 +37,7 @@ class SingUp extends React.Component {
       );
 
       await createUser(user, { displayName });
+
       this.setState({
         displayName: "",
         email: "",
@@ -59,6 +61,7 @@ class SingUp extends React.Component {
         <h2 className="title"> I do not have an account</h2>
         <span>Sing Up with your email and password</span>
         <form className="sing-up-form" onSubmit={this.handleSubmit}>
+          
           <FormInput
             type="text"
             name="displayName"
@@ -91,7 +94,7 @@ class SingUp extends React.Component {
             name="confirmPassword"
             value={confirmPassword}
             onChange={this.handleChange}
-            label="Display Name"
+            label="Confirm Password"
             required
           />
 
