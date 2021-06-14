@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 import { ReactComponent as Logo } from "../../image/logo/logo.svg";
 import { auth } from "../../firebase/fireabase.utils";
 
@@ -21,10 +22,12 @@ const Header = ({ currentUser }) => (
       </Link>
 
       {currentUser ? (
-        <div className="option" onClick={() => auth.signOut()}> SING OUT</div>
+        <div className="option" onClick={() => auth.signOut()}>
+        
+          SING OUT
+        </div>
       ) : (
         <Link className="option" to="/singIn">
-          
           SING IN
         </Link>
       )}
@@ -32,4 +35,9 @@ const Header = ({ currentUser }) => (
   </div>
 );
 
-export default Header;
+const mapStateToProps = state => ({
+  currentUser: state.user.currentUser
+
+})
+
+export default connect(mapStateToProps)(Header);
