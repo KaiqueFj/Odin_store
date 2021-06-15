@@ -1,17 +1,15 @@
-export const addItemToCart = (cartItems, carItemToAdd) => {
-    const existingCartItems =
-        cartItems.find(
-            cartItem => cartItem.id === carItemToAdd.id
-        );
-
-    // Will mapthrough the  cart and add the products 
-    if (existingCartItems) {
-        return cartItems.map(cartItem =>
-            cartItem.id === carItemToAdd.id
-                ? { ...cartItem, quantity: cartItem.quantity + 1 }
-                : cartItem
-        )
+export const addItemToCart = (cartItems, cartItemToAdd) => {
+    const existingCartItem = cartItems.find(
+      cartItem => cartItem.id === cartItemToAdd.id
+    );
+  
+    if (existingCartItem) {
+      return cartItems.map(cartItem =>
+        cartItem.id === cartItemToAdd.id
+          ? { ...cartItem, quantity: cartItem.quantity + 1 }
+          : cartItem
+      );
     }
-
-    return [...cartItems, { ...carItemToAdd, quantity: 1 }]
-}
+  
+    return [...cartItems, { ...cartItemToAdd, quantity: 1 }];
+  };
