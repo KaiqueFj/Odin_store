@@ -4,7 +4,7 @@ import SingIn from "../sing-in/sing-in.component";
 import SingUp from "../sing-Up/sing-up.component";
 import '../../styles/components/SingIn-SingUp/SingIn-SingUp.styles.scss';
 
-const SingIn_SingUp = () => (
+const SingInSingUp = () => (
   <div className='sign-in-and-sign-up'>
     <SingIn />
     <SingUp />
@@ -12,4 +12,4 @@ const SingIn_SingUp = () => (
 );
 
 
-export default SingIn_SingUp;
+export default SingInSingUp;
