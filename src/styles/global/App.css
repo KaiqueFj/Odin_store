@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'open sans Condensed';
+    padding:20px 60px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
