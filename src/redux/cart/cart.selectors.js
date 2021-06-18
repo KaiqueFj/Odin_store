@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { createSelector } from 'reselect';
+=======
+import { createSelector } from 'reselect'
+>>>>>>> f2ff671 (updated)
 
 const selectCart = state => state.cart;
 
