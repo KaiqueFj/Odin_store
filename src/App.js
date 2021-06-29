@@ -4,10 +4,10 @@ import { connect } from 'react-redux';
 import {createStructuredSelector} from 'reselect'
 
 import Header from './components/header/header.component'
-import SingInSingUp from './components/SingIn-SingUp/SingIn-SingUp.components'
-import HomePage from './components/homepage/homepage.component';
-import ShopPage from './components/shop/shop.component.jsx'
-import CheckoutPage from './components/checkout/checkout.component'
+import SingInSingUp from './pages/SingIn-SingUp/SingIn-SingUp.components'
+import HomePage from './pages/homepage/homepage.component';
+import ShopPage from './pages/shop/shop.component.jsx'
+import CheckoutPage from './pages/checkout/checkout.component'
 
 import { auth, createUser } from './firebase/fireabase.utils'
 import { setCurrentUser } from './redux/user/user.actions'
