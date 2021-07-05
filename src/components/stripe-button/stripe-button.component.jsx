@@ -17,7 +17,7 @@ const StripeCheckoutButton = ({ price }) => {
       name="Odin Store"
       billingAddress
       shippingAddress
-      image="https://sendeyo.com/up/d/f3eb2117da"
+      image="https://www.odin.com.br/wp-content/uploads/2018/08/cropped-Odin_shield_512px.png"
       description={`Your total is $${price}`}
       amount={priceForStripe}
       panelLabel="Pay Now"

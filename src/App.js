@@ -5,7 +5,7 @@ import {createStructuredSelector} from 'reselect'
 
 import Header from './components/header/header.component'
 import SingInSingUp from './pages/SingIn-SingUp/SingIn-SingUp.components'
-import HomePage from './pages/homepage/homepage.component';
+import HomePage from './pages/homepage/homepage';
 import ShopPage from './pages/shop/shop.component.jsx'
 import CheckoutPage from './pages/checkout/checkout.component'
 
