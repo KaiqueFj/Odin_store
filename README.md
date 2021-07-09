@@ -12,5 +12,6 @@
 **🌟 Where is the app deployed ?**
 
 - App deployed in heroku
+**https://odin-store.herokuapp.com/**
 
 **That´s all folks ;)**
