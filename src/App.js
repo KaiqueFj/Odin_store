@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
-import {createStructuredSelector} from 'reselect'
+import { createStructuredSelector } from 'reselect'
 
 import Header from './components/header/header.component'
 import SingInSingUp from './pages/SingIn-SingUp/SingIn-SingUp.components'
@@ -9,7 +9,7 @@ import HomePage from './pages/homepage/homepage';
 import ShopPage from './pages/shop/shop.component.jsx'
 import CheckoutPage from './pages/checkout/checkout.component'
 
-import { auth, createUser } from './firebase/fireabase.utils'
+import { auth, createUser,  } from './firebase/fireabase.utils'
 import { setCurrentUser } from './redux/user/user.actions'
 import { selectCurrentUser } from './redux/user/user.selectors';
 
@@ -36,6 +36,8 @@ class App extends React.Component {
       }
 
       setCurrentUser(userAuth);
+
+     
     });
   }
 
@@ -67,7 +69,7 @@ class App extends React.Component {
   }
 }
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser
+  currentUser: selectCurrentUser,
 });
 
 const mapDispatchToProps = dispatch => ({
