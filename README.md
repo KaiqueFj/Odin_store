@@ -10,16 +10,15 @@
 
 **🌟Improvements to do**
 
-
-**🌟 Where is the app deployed ?**
-
 - Responsive pages
 - SVG images
 - Animations
 - Improvements of redux and flow data
 
+**🌟 Where is the app deployed ?**
 
 - App deployed in heroku
+
 **https://odin-store.herokuapp.com/**
 
 **That´s all folks ;)**
