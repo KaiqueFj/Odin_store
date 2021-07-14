@@ -8,8 +8,16 @@
 - Search through categories of products
 - Pay the products that u choose using stripe with a fake card
 
+**🌟Improvements to do**
+
 
 **🌟 Where is the app deployed ?**
+
+- Responsive pages
+- SVG images
+- Animations
+- Improvements of redux and flow data
+
 
 - App deployed in heroku
 **https://odin-store.herokuapp.com/**
